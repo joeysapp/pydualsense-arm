@@ -20,6 +20,7 @@ class Event(object):
             fn (function): _description_
         """
         self._event_handler.append(fn)
+        print('Subscirbee??????????')        
         return self
 
     def unsubscribe(self, fn):
@@ -30,6 +31,7 @@ class Event(object):
             fn (function): _description_
         """
         self._event_handler.remove(fn)
+        print('unsubirlbirenb??')
         return self
 
     def __iadd__(self, fn):
@@ -40,6 +42,7 @@ class Event(object):
             fn (function): _description_
         """
         self._event_handler.append(fn)
+        print('isadd??????????')        
         return self
 
     def __isub__(self, fn):
@@ -50,6 +53,7 @@ class Event(object):
             fn (function): _description_
         """
         self._event_handler.remove(fn)
+        print('isbu??????????')
         return self
 
     def __call__(self, *args, **keywargs):
@@ -57,4 +61,5 @@ class Event(object):
         calls all event subscription functions
         """
         for eventhandler in self._event_handler:
+            print('serisousely wat')
             eventhandler(*args, **keywargs)

@@ -1,10 +1,7 @@
 from enum import IntFlag
-
-
 class ConnectionType(IntFlag):
     BT = 0x0
     USB = 0x1
-
 
 class LedOptions(IntFlag):
     Off = 0x0
@@ -12,18 +9,15 @@ class LedOptions(IntFlag):
     UninterrumpableLed = 0x2
     Both = 0x01 | 0x02
 
-
 class PulseOptions(IntFlag):
     Off = 0x0
     FadeBlue = 0x1
     FadeOut = 0x2
 
-
 class Brightness(IntFlag):
     high = 0x0
     medium = 0x1
     low = 0x2
-
 
 class PlayerID(IntFlag):
     PLAYER_1 = 4
@@ -31,7 +25,6 @@ class PlayerID(IntFlag):
     PLAYER_3 = 21
     PLAYER_4 = 27
     ALL = 31
-
 
 class TriggerModes(IntFlag):
     Off = 0x0  # no resistance
@@ -44,7 +37,6 @@ class TriggerModes(IntFlag):
     Pulse_B = 0x2 | 0x04
     Pulse_AB = 0x2 | 0x20 | 0x04
     Calibration = 0xFC
-
 
 class BatteryState(IntFlag):
     POWER_SUPPLY_STATUS_DISCHARGING = 0x0

@@ -13,6 +13,8 @@ setup(
     url='https://github.com/flok/pydualsense',
     author='Florian (flok) K',
     license='MIT License',
-    packages=setuptools.find_packages(),
-    install_requires=['hidapi-usb>=0.3', 'cffi']
+    # packages=setuptools.find_packages(),
+    # needed for pip3 -e /local/dir?
+    packages=['pydualsense'],
+    # install_requires=['hidapi-usb>=0.3', 'cffi']
 )
